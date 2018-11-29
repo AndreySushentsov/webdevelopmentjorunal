@@ -28,11 +28,14 @@
 		<div class="page__title">Свежие посты в Back End</div>
 
 		<div class="post-card__container">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-			/* 
-			 * Выводит посты из категории Back End
-			 */
-			if ( in_category( 4 ) ) : ?>
+			<?php 
+			$args = array( 
+				'posts_per_page' => 4,
+				'category__in' => 4
+			);
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+			?>
 			 
 				<div class="post-card">
 			        <h2><?php the_title() ?></h2>
@@ -46,7 +49,7 @@
 			        <?php _e( 'Категория: ', 'textdomain' ); the_category( ', ' ); ?>
 			
 				</div>
-			<?php endif; ?>
+			
 			<?php endwhile; else :
 			/*
 			 * Если постов в данной категории не найден
@@ -55,18 +58,21 @@
 			 // Завершить цикл
 			 endif;
 			 // Сбросить данные
-			 rewind_posts(); 
+			 wp_reset_postdata();
 			?>
 		</div>
 
 		<div class="page__title">Свежие посты в Back End</div>
 
 		<div class="post-card__container">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-			/* 
-			 * Выводит посты из категории Font End  
-			 */
-			if ( in_category( 3 ) ) : ?>
+			<?php 
+			$args = array( 
+				'posts_per_page' => 4,
+				'category__in' => 3
+			);
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+			?>
 			 
 				<div class="post-card">
 			        <h2><?php the_title() ?></h2>
@@ -80,7 +86,6 @@
 			        <?php _e( 'Категория ', 'textdomain' ); the_category( ', ' ); ?>
 			
 				</div>
-			<?php endif; ?>
 			<?php endwhile; else :
 			/*
 			 * Если в данной категории нет постов

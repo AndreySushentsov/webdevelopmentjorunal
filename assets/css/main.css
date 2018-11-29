@@ -22,7 +22,11 @@ body{
 	max-width: 1200px;
 	margin:0 auto;
 }
-
+.page__title{
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 20px;
+}
 
 
 
@@ -83,8 +87,10 @@ footer{
 .post-card__container{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	/*justify-content: space-around;*/
 }
 .post-card{
 	border: 1px solid black;
+	width: 25%;
+	padding: 10px;
 }
