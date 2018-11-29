@@ -59,7 +59,7 @@
 			?>
 		</div>
 
-		<div class="page__title">Свежие посты в Front End</div>
+		<div class="page__title">Свежие посты в Back End</div>
 
 		<div class="post-card__container">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
