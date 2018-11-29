@@ -1,0 +1,77 @@
+/*
+ * =====================================
+ * GENERAL STYLES
+ * =====================================
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Exo 2', sans-serif;
+}
+
+
+/*
+ * =====================================
+ * COMPONENTS STYLES
+ * =====================================
+ */
+.container{
+	max-width: 1200px;
+	margin:0 auto;
+}
+
+
+
+
+
+/*
+ * =====================================
+ * HEADER STYLES
+ * =====================================
+ */
+
+header .container{
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+/*Header Navigaton Styles*/
+.navigation__list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color: #353434;
+}
+.navigation__list li{
+	list-style-type: none;
+}
+
+.navigation__list li a{
+	display: flex;
+	padding: 10px 20px;
+	justify-content: center;
+	align-items: center;
+	transition: .2s;
+	text-decoration: none;
+	color: white;
+}
+.navigation__list li a:hover{
+	background-color: green;
+}
+
+
+/*
+ * =====================================
+ * FOOTER STYLES
+ * =====================================
+ */
+
+footer{
+	background-color: #353434;
+}
