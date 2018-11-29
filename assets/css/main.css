@@ -26,7 +26,6 @@ body{
 
 
 
-
 /*
  * =====================================
  * HEADER STYLES
@@ -65,7 +64,6 @@ header .container{
 	background-color: green;
 }
 
-
 /*
  * =====================================
  * FOOTER STYLES
@@ -74,4 +72,19 @@ header .container{
 
 footer{
 	background-color: #353434;
+}
+
+
+/*
+ * =====================================
+ * MAIN PAGE POST-CARD STYLES
+ * =====================================
+ */
+.post-card__container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.post-card{
+	border: 1px solid black;
 }
