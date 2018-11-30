@@ -15,7 +15,7 @@
 <body>
 	<header>
 		<div class="container">
-			<a href="#">logo</a>
+			<a href="/">logo</a>
 		</div>
 		<nav>
 			<?php wp_nav_menu( array( 
