@@ -30,6 +30,9 @@ li{
 	max-width: 1200px;
 	margin:0 auto;
 }
+.sidebar-container{
+	width: 30%;
+}
 .page__title{
 	font-size: 1.5rem;
 	text-align: center;
@@ -171,9 +174,6 @@ footer{
 	flex-direction: row;
 	margin-top:50px;
 }
-.category__sidebar-container{
-	width: 30%;
-}
 .category__post-card-container{
 	width: 100%;
 }
@@ -208,3 +208,22 @@ footer{
  * SINGLE POST PAGE STYLES
  * =====================================
  */
+ .post-page__container{
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: space-between;
+ 	margin-top: 50px;
+ }
+ .post__container{
+ 	background-color: white;
+ 	padding: 20px;
+ 	width: 90%;
+ 	margin-right: 20px;
+ }
+.post__thumbnail{
+	max-height: 400px;
+	overflow: hidden;
+}
+ .post__thumbnail img{
+ 	width: 100%;
+ }

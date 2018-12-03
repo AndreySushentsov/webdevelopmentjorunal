@@ -1,6 +1,6 @@
 <?php get_header();?>
 	<main class="container category__container">
-		<div class="category__sidebar-container">
+		<div class="sidebar-container">
 			<?php get_sidebar();?>	
 		</div>
 		<div class="category__post-card-container">
