@@ -14,7 +14,10 @@ body{
 	color: #4a4a4a;
 }
 
-
+a{
+	text-decoration: none;
+	color: #4a4a4a;
+}
 /*
  * =====================================
  * COMPONENTS STYLES
@@ -29,7 +32,14 @@ body{
 	text-align: center;
 	padding: 20px;
 }
-
+.button{
+	padding: 10px;
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+	transition: .2s;
+	background-color: green;
+}
 
 
 /*
@@ -89,10 +99,55 @@ footer{
 .post-card__container{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .post-card{
-	width: 20%;
+	width: 23%;
 	padding: 10px;
 	background-color: white;
+}
+.post-card__link-container{
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.post-card__link{
+	display: flex;	
+	overflow: hidden;
+	max-height: 200px;
+	box-shadow: 1px 2px 2px #4c4c4c;
+	border-radius:4px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: .2s;
+}
+.post-card__link:hover{
+	background-color: rgba(255, 255, 255, .2);
+	top: -10px;
+	box-shadow: 2px 5px 10px #4c4c4c;
+}
+
+.post-card__link img{
+	width: 100%;
+}
+.post-card__title-link{
+	transition: .2s;
+}
+.post-card__title-link:hover{
+	color:#cac8c8;
+}
+.post-card__button-container{
+ display: flex;
+ justify-content: flex-end;
+}
+
+.post-card__button{
+	display: flex;
+	margin-top: 20px;
+	width: 15%;
+	justify-content: center;
 }

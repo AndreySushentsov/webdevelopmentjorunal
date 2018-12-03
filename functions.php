@@ -7,12 +7,8 @@ function add_scripts_styles()
 };
 add_action( 'wp_enqueue_scripts', 'add_scripts_styles' );
 
-// function add_media(){
-// 	wp_enqueue_media();
-// };
-// add_action( 'admin_enqueue_scripts', 'add_media' );
 
-
+// Подключаем загрузчик файлов в админке
 if(!function_exists("main_setup")):
 	function main_setup()
 	{

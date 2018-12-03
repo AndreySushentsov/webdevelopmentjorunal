@@ -13,10 +13,12 @@
 			?>
 			 
 				<div class="post-card">
-					<a href="<?php the_permalink();?>">
-						<img src="<?php the_post_thumbnail_url(); ?>">
-					</a>
-					<h2><?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );?>
+					<div class="post-card__link-container">
+						<a class="post-card__link" href="<?php the_permalink();?>">
+							<img src="<?php the_post_thumbnail_url(); ?>">
+						</a>
+					</div>
+					<h2><?php the_title( sprintf( '<h2 class="entry-title"><a class="post-card__title-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );?>
 					</h2>
 			        <?php _e( 'Категория: ', 'textdomain' ); the_category( ', ' ); ?>
 			
@@ -32,9 +34,11 @@
 			 // Сбросить данные
 			 wp_reset_postdata();
 			?>
-			<a href="<?php echo get_category_link(4); ?>">Смотреть все посты </a>
 		</div>
-
+		<div class="post-card__button-container">
+			<a class="post-card__button button" href="<?php echo get_category_link(4); ?>">Смотреть все посты </a>	
+		</div>
+		
 		<div class="page__title">Свежие посты в Back End</div>
 
 		<div class="post-card__container">
@@ -48,26 +52,30 @@
 			?>
 			 
 				<div class="post-card">
-			        <h2><?php the_title() ?></h2>
-			 
-			        <small><?php _e( 'Автор: ', 'textdomain' ); the_author_posts_link() ?></small>
-
-			 		<div class="entry">
-			            <?php the_content() ?>
-			        </div>
-			
-			        <?php _e( 'Категория ', 'textdomain' ); the_category( ', ' ); ?>
+					<div class="post-card__link-container">
+						<a class="post-card__link" href="<?php the_permalink();?>">
+							<img src="<?php the_post_thumbnail_url(); ?>">
+						</a>
+					</div>
+					<h2><?php the_title( sprintf( '<h2 class="entry-title"><a class="post-card__title-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );?>
+					</h2>
+			        <?php _e( 'Категория: ', 'textdomain' ); the_category( ', ' ); ?>
 			
 				</div>
+			
 			<?php endwhile; else :
 			/*
-			 * Если в данной категории нет постов
+			 * Если постов в данной категории не найден
 			 */
-			_e( 'Извените на данный момент в этой категории нет постов. ((', 'textdomain' );
+			_e( 'Извените, но пока в данной категории нет ни одного поста. ((', 'textdomain' );
 			 // Завершить цикл
 			 endif;
-			?>		
-			<a href="<?php echo get_category_link(3); ?>">Смотреть все посты </a>	
+			 // Сбросить данные
+			 wp_reset_postdata();
+			?>
+		</div>
+		<div class="post-card__button-container">
+			<a class="post-card__button button" href="<?php echo get_category_link(3); ?>">Смотреть все посты </a>	
 		</div>
 	</main>
 <?php get_footer();?>
