@@ -18,6 +18,9 @@ a{
 	text-decoration: none;
 	color: #4a4a4a;
 }
+li{
+	list-style-type: none;
+}
 /*
  * =====================================
  * COMPONENTS STYLES
@@ -41,7 +44,12 @@ a{
 	background-color: green;
 }
 
-
+.widget{
+	padding: 5px;
+	background-color: white;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
 /*
  * =====================================
  * HEADER STYLES
@@ -112,7 +120,7 @@ footer{
 	margin-bottom: 20px;
 }
 
-.post-card__link{
+.post-card__link, .category__post-card-link{
 	display: flex;	
 	overflow: hidden;
 	max-height: 200px;
@@ -131,7 +139,7 @@ footer{
 	box-shadow: 2px 5px 10px #4c4c4c;
 }
 
-.post-card__link img{
+.post-card__link img, .category__post-card-link img{
 	width: 100%;
 }
 .post-card__title-link{
@@ -151,3 +159,52 @@ footer{
 	width: 15%;
 	justify-content: center;
 }
+
+/*
+ * =====================================
+ * CATEGORY PAGE POST-CARD STYLES
+ * =====================================
+ */
+
+.category__container{
+	display: flex;
+	flex-direction: row;
+	margin-top:50px;
+}
+.category__sidebar-container{
+	width: 30%;
+}
+.category__post-card-container{
+	width: 100%;
+}
+.category__post-card{
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	width: 90%;
+	padding: 10px;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.category__img-container{
+	height: 200px;
+	position: relative;
+	width: 25%;
+	margin-right: 20px;
+}
+.category__post-card-link:hover{
+	left:-10px;
+}
+.category__post-card-span{
+	display: flex;
+	font-size: .8rem;
+	font-style: italic;
+}
+
+
+/*
+ * =====================================
+ * SINGLE POST PAGE STYLES
+ * =====================================
+ */

@@ -28,3 +28,16 @@ function register_my_menus() {
 
 add_action( 'init', 'register_my_menus' );
 
+// подлкючаем сайдбар
+function sidebar_init() {
+    register_sidebar( array(
+        'name'          => __( 'Main Sidebar', 'textdomain' ),
+        'id'            => 'sidebar_main',
+        'description'   => __( 'Виджеты для главного сайбара', 'textdomain' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="widgettitle">',
+        'after_title'   => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'sidebar_init' );
