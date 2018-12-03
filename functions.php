@@ -7,7 +7,19 @@ function add_scripts_styles()
 };
 add_action( 'wp_enqueue_scripts', 'add_scripts_styles' );
 
+// function add_media(){
+// 	wp_enqueue_media();
+// };
+// add_action( 'admin_enqueue_scripts', 'add_media' );
 
+
+if(!function_exists("main_setup")):
+	function main_setup()
+	{
+		add_theme_support('post-thumbnails');
+	}
+endif;
+add_action('after_setup_theme','main_setup');
 
 // Подключаем меню
 function register_my_menus() {

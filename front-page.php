@@ -13,14 +13,11 @@
 			?>
 			 
 				<div class="post-card">
-			        <h2><?php the_title() ?></h2>
-			 
-			        <small><?php _e( 'Автор ', 'textdomain' ); the_author_posts_link() ?></small>
-
-			 		<div class="entry">
-			            <?php the_content() ?>
-			        </div>
-			
+					<a href="<?php the_permalink();?>">
+						<img src="<?php the_post_thumbnail_url(); ?>">
+					</a>
+					<h2><?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );?>
+					</h2>
 			        <?php _e( 'Категория: ', 'textdomain' ); the_category( ', ' ); ?>
 			
 				</div>
