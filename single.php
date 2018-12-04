@@ -9,14 +9,14 @@
 
 <!--здесь выводится миниатюра записи-->
 	<div class="thumbnail post__thumbnail"><?php echo get_the_post_thumbnail(); ?></div>
-	<p><?php the_content(); ?></p>
+	<?php the_content(); ?>
 	<?php 
 	endwhile;
 	wp_reset_query();
 
 ?>
 
-		<p><?php the_tags(); ?></p>
+	<p><?php the_tags(); ?></p>
 	<div>
 		<?php 
 			wp_link_pages( array(
