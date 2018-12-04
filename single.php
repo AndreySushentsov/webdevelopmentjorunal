@@ -13,7 +13,28 @@
 	<?php 
 	endwhile;
 	wp_reset_query();
+
 ?>
+
+		<p><?php the_tags(); ?></p>
+	<div>
+		<?php 
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+				'after'  => '</div>',
+			) );
+		?>	
+	</div>
+
+
+	<div class="comments__container">
+	<?php 					// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+	?>
+	</div>
+
 	</div>
 	<div class="sidebar-container">
 		<?php get_sidebar();?>
