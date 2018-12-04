@@ -12,13 +12,13 @@
 						<img src="<?php the_post_thumbnail_url(); ?>">
 					</a>
 				</div>
-				<dir>
-					<h2><?php the_title( sprintf( '<h2 class="entry-title"><a class="post-card__title-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );?>
+				<div>
+					<h2 class="entry-title"><?php the_title( sprintf( '<a class="post-card__title-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );?>
 					</h2>
 					<span class="category__post-card-span">
 						<?php _e( 'Категория: ', 'textdomain' ); the_category( ', ' ); ?>
 					</span>
-				</dir>
+				</div>
 			</div>
 			<?php endwhile; wp_reset_query();?>	
 		</div>
